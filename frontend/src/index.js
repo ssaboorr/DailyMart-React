@@ -1,10 +1,11 @@
 import { render } from "react-dom";
 import App from "./App";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider,ColorModeScript } from "@chakra-ui/react";
+import theme from './theme'
 
 render(
   <ChakraProvider>
-    <App />
+   <ColorModeScript initialColorMode={theme.config.initialColorMode}/> <App />
   </ChakraProvider>,
   document.querySelector("#root")
 );

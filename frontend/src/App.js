@@ -1,10 +1,16 @@
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 const App = () => {
-  return(
+  return (
     <>
-      <h1>Hello world</h1>
+      <Header />
+
+      <div style={{height:'500px'}}>
+     
+      </div>
+      <Footer />
     </>
   );
 };
 
-
-export default App
+export default App;
