@@ -9,13 +9,13 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { HiShoppingBag, HiUser, HiOutlineMenuAlt3 } from "react-icons/hi";
-import {BsMoon} from "react-icons/bs"
+import { BsMoon } from "react-icons/bs";
 
 function ColorMode() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <header>
-      <Icon as={BsMoon} onClick={toggleColorMode}>
+      <Icon color="teal.500" as={BsMoon} onClick={toggleColorMode}>
         Toggle {colorMode === "light" ? "Dark" : "Light"}
       </Icon>
     </header>
@@ -52,7 +52,7 @@ const Header = () => {
       wrap="wrap"
       py="6"
       px="6"
-      //   bgColor="gray.800"
+      bgColor="gray.800"
       w="100%"
       top="0"
       zIndex="2"
