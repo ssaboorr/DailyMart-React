@@ -1,3 +1,5 @@
+import { Link as RouterLink } from "react-router-dom";
+
 import { useState } from "react";
 import {
   Flex,
@@ -25,7 +27,8 @@ function ColorMode() {
 const MenuItem = ({ children, url }) => {
   return (
     <Link
-      href={url}
+      as={RouterLink}
+      to={url}
       fontSize="sm"
       letterSpacing="wide"
       color="teal.500"
@@ -66,7 +69,11 @@ const Header = () => {
           size="md"
           letterSpacing="md"
         >
-          <Link href="/" _hover={{ color: "gray.500", textDecor: "none" }}>
+          <Link
+            as={RouterLink}
+            to="/home"
+            _hover={{ color: "gray.500", textDecor: "none" }}
+          >
             Daily Mart
           </Link>
         </Heading>
@@ -84,14 +91,19 @@ const Header = () => {
         width={{ base: "full", md: "auto" }}
         alignItems="center"
       >
-        <MenuItem url="/">
+        <MenuItem url="/cart">
           <Flex alignItems="center">
             <Icon as={HiShoppingBag} w="4" h="4" mr="1" /> Cart
           </Flex>
         </MenuItem>
-        <MenuItem url="/">
+        <MenuItem url="/login">
           <Flex alignItems="center">
             <Icon as={HiUser} w="4" h="4" mr="1" /> Login
+          </Flex>
+        </MenuItem>
+        <MenuItem url="/product-details">
+          <Flex alignItems="center">
+            <Icon as={HiUser} w="4" h="4" mr="1" /> Product
           </Flex>
         </MenuItem>
         <ColorMode />
