@@ -27,13 +27,28 @@ const ProductDetails = () => {
   return (
     <>
       <Flex mt="100px" mb="5">
-        <Button mx="2" as={RouterLink} to="/home" mb="5" bgColor="gray.500" colorScheme="teal">
+        <Button
+          mx="2"
+          as={RouterLink}
+          to="/"
+          mb="5"
+          bgColor="gray.500"
+          colorScheme="teal"
+        >
           Go back
         </Button>
       </Flex>
-      <Grid templateColumns={{lg:'5fr 4fr 3fr',md:'4fr 3fr 2fr',base:'1fr'}} gap="10">
+      <Grid
+        templateColumns={{ lg: "5fr 4fr 3fr", md: "4fr 3fr 2fr", base: "1fr" }}
+        gap="10"
+      >
         {/* Column one */}
-        <Image mx="3" src={product.image} alt={product.name} borderRadius="md" />
+        <Image
+          mx="3"
+          src={product.image}
+          alt={product.name}
+          borderRadius="md"
+        />
         {/* Column two */}
 
         <Flex display="flex" flexDirection="column">
@@ -67,13 +82,15 @@ const ProductDetails = () => {
           <Divider />
 
           <Button
-          bgColor="gray.500"
-          textTransform="uppercase"
-          letterSpacing="wide"
-          colorScheme="teal"
-          my="2"
-          disabled={product.countInStock === 0}
-          >Add to Cart</Button>
+            bgColor="gray.500"
+            textTransform="uppercase"
+            letterSpacing="wide"
+            colorScheme="teal"
+            my="2"
+            disabled={product.countInStock === 0}
+          >
+            Add to Cart
+          </Button>
         </Flex>
       </Grid>
     </>
